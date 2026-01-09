@@ -303,6 +303,11 @@ pub unsafe extern "C" fn initialize_runtime() {
                     }),
                 )
                 .unwrap();
+
+            // Test function: testAdd(a: number, b: number) -> number
+            ctx.globals()
+                .set("testAdd", Func::from(|a: f64, b: f64| -> f64 { a + b }))
+                .unwrap();
         });
 
         runtime
