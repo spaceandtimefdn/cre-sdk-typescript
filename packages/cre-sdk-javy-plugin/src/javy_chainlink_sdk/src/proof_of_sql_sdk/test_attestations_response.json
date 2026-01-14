@@ -1,0 +1,51 @@
+{
+  "attestations": [
+    {
+      "signature": {
+        "r": "0x0aadcc62871621389df55e32ab2a71bcbb60fbf75994ddccd26f3a4204726ae4",
+        "s": "0x15e73ea804162dcb455efcd747f40050e77cc9d585e7de9d640478ded029e920",
+        "v": 1
+      },
+      "proposedPubKey": "0x02e6b88162d12753a7f9074ca32854bb9022941f2158f3f179212d1abb030125b3",
+      "address20": "0xe7c9f4d5b48920f6e561b4889bb9bef9874c57e0",
+      "stateRoot": "0x742fdac4036e107068940342dbc4b638388736107aa28f4c91e49b9435c89590",
+      "blockNumber": 4425701
+    },
+    {
+      "signature": {
+        "r": "0xd8cc7dbf0881c1fedf2926433c8dc22b24de6030f1d503d133655e72ec970527",
+        "s": "0x06a66d51e3930b56c600d8112ff7f897b5e2292a7eeb120987d0fe26203f5bda",
+        "v": 1
+      },
+      "proposedPubKey": "0x0259fa36fd0d3fc21ba33904a68d6af18edf59bf5a9c1cc31dda371d3f38993bc9",
+      "address20": "0x813d6af4222a6b8ea3237f3a9eb7a9d58ade2ace",
+      "stateRoot": "0x742fdac4036e107068940342dbc4b638388736107aa28f4c91e49b9435c89590",
+      "blockNumber": 4425701
+    },
+    {
+      "signature": {
+        "r": "0x7a8d1504996019080ae665f25c3f98cf2689af4ee9b9b41f6109facf7daf3509",
+        "s": "0x4ae1f7e0b9d246b7992870e4969b27a47798d686b764b6bd0e657f8a2463d347",
+        "v": 1
+      },
+      "proposedPubKey": "0x02e6b88162d12753a7f9074ca32854bb9022941f2158f3f179212d1abb030125b3",
+      "address20": "0xe7c9f4d5b48920f6e561b4889bb9bef9874c57e0",
+      "stateRoot": "0x0089dd05c30662add572c13d385ac83dc9ce3377e082183dfad69d0f47322dd766",
+      "blockNumber": 6333512
+    },
+    {
+      "signature": {
+        "r": "0x261d3d81f828f29e2b50fc935be0e240e0c90113f07368f48b94b5efd1a523f8",
+        "s": "0x240ca909b6d2e9b562c2413c7b2afe2844a0a3164006ca7d97372f02deb47969",
+        "v": 1
+      },
+      "proposedPubKey": "0x0259fa36fd0d3fc21ba33904a68d6af18edf59bf5a9c1cc31dda371d3f38993bc9",
+      "address20": "0x813d6af4222a6b8ea3237f3a9eb7a9d58ade2ace",
+      "stateRoot": "0x0089dd05c30662add572c13d385ac83dc9ce3377e082183dfad69d0f47322dd766",
+      "blockNumber": 6333512
+    }
+  ],
+  "attestationsFor": "0x0c4bb416e89e8daf310bc4972e825c2c176437869e7b960ce9c3523b233c0a26",
+  "attestationsForBlockNumber": 6333512,
+  "at": "0xb367ff8440b90dfe1d130c9f034ab5483fa2f0e499840f0e454a6218dadf2dbd"
+}

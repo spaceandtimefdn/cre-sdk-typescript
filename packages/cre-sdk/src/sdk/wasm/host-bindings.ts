@@ -28,6 +28,7 @@ const globalHostBindingsSchema = z.object({
 		.returns(z.union([z.instanceof(Uint8Array), z.custom<Uint8Array<ArrayBufferLike>>()])),
 	getWasiArgs: z.function().args().returns(z.string()),
 	now: z.function().args().returns(z.number()),
+	proofOfSqlVerify: z.function().args(z.string(), z.string()).returns(z.string()),
 })
 
 type GlobalHostBindingsMap = z.infer<typeof globalHostBindingsSchema>

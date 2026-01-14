@@ -12,6 +12,9 @@ use std::collections::HashMap;
 use base64::Engine;
 use rand::{Rng, SeedableRng};
 use rand_chacha::ChaCha8Rng;
+    
+mod proof_of_sql_sdk;
+use proof_of_sql_sdk::proof_of_sql_verify;
 
 // ✅ Host imports: implemented in Go
 #[link(wasm_import_module = "env")]
@@ -302,6 +305,11 @@ pub unsafe extern "C" fn initialize_runtime() {
                         Ok(milliseconds as f64)
                     }),
                 )
+                .unwrap();
+
+            // Test function: proofOfSqlVerify(query_response_json: String, attestations_response_json: String) -> String
+            ctx.globals()
+                .set("proofOfSqlVerify", Func::from(proof_of_sql_verify))
                 .unwrap();
         });
 
