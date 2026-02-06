@@ -33,9 +33,9 @@ jobs:
           curl -fsSL https://bun.sh/install | bash
           echo "$HOME/.bun/bin" >> $GITHUB_PATH
 
-      - name: Bun version
+      - name: Node version
         run: |
-          bun --version
+          node --version
 
       - name: Add types
         run: bun add -d @types/node
