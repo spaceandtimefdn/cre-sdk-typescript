@@ -11,15 +11,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Create GitHub App Token
-        id: app-token
-        uses: actions/create-github-app-token@v1
-        with:
-          app-id: ${{ secrets.RELEASE_APP_ID }}
-          private-key: ${{ secrets.RELEASE_APP_PRIVATE_KEY }}
       - uses: actions/checkout@v4
         with:
-          token: ${{ steps.app-token.outputs.token }}
           ref: ${{ github.head_ref }}
           # Make sure the value of GITHUB_TOKEN will not be persisted in repo's config
           persist-credentials: false
