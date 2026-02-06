@@ -2,7 +2,7 @@ name: Release
 on:
   push:
     branches:
-      - main
+      - ci-testing
 permissions:
   id-token: write
 jobs:
@@ -11,6 +11,21 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Create GitHub App Token
+        id: app-token
+        uses: actions/create-github-app-token@v1
+        with:
+          app-id: ${{ secrets.RELEASE_APP_ID }}
+          private-key: ${{ secrets.RELEASE_APP_PRIVATE_KEY }}
+      - uses: actions/checkout@v4
+        with:
+          token: ${{ steps.app-token.outputs.token }}
+          ref: ${{ github.head_ref }}
+          # Make sure the value of GITHUB_TOKEN will not be persisted in repo's config
+          persist-credentials: false
+          # Pull all previous tags
+          fetch-depth: 0
+          fetch-tags: true
       - name: Set Up Node.js
         uses: actions/setup-node@v3
         env:
@@ -26,6 +41,6 @@ jobs:
           npm publish --access public --non-interactive
 
       - name: Publish to npm
-        working-directory: ./packages/cre-sdk
+        working-directory: packages/cre-sdk
         run: |
           npm publish --access public --non-interactive
