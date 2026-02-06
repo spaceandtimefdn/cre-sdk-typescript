@@ -37,6 +37,9 @@ jobs:
         run: |
           bun --version
 
+      - name: Add types
+        run: bun add -d @types/node
+
       - name: Publish to npm
         working-directory: ./packages/cre-sdk-javy-plugin
         run: |
