@@ -41,11 +41,6 @@ jobs:
         run: bun add -d @types/node
 
       - name: Publish to npm
-        working-directory: ./packages/cre-sdk-javy-plugin
-        run: |
-          npm publish --access public --non-interactive
-
-      - name: Publish to npm
         working-directory: packages/cre-sdk
         run: |
           npm publish --access public --non-interactive
