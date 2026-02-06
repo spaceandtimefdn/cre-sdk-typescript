@@ -28,6 +28,12 @@ jobs:
           registry-url: 'https://registry.npmjs.org/'
           scope: '@spaceandtime'
 
+      - name: Bun install
+        run: |
+          curl -fsSL https://bun.sh/install | bash
+          echo "$HOME/.bun/bin" >> $GITHUB_PATH
+
+
       - name: Publish to npm
         working-directory: ./packages/cre-sdk-javy-plugin
         run: |
