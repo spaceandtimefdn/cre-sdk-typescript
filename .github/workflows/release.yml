@@ -33,6 +33,9 @@ jobs:
           curl -fsSL https://bun.sh/install | bash
           echo "$HOME/.bun/bin" >> $GITHUB_PATH
 
+      - name: Bun version
+        run: |
+          bun --version
 
       - name: Publish to npm
         working-directory: ./packages/cre-sdk-javy-plugin
