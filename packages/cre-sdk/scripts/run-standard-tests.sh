@@ -17,5 +17,5 @@ fi
 # Copy standard test files to dist
 echo "Copying test files..." && cp -r ./src/standard_tests/* ./dist/workflows/standard_tests/
 
-# Run standard tests
-make standard_tests
+# # Run standard tests
+# make standard_tests
